@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haytham's Responsive Portfolio</title> 
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icon CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="hero-header">
+        <div class="container">
+            <div class="toggle">
+                <i class=" fa fa-sun"></i>
+            </div>
+           
+            <div class="header-content">
+                <div class="profile">
+                    <img src="images/profile.PNG" alt="mon image">
+                </div>
+                <div class="text-content">
+                    <h1>I'm Haytham Hammame<br> <span>Web and software developer</span></h1>
+                    <p>
+                        I'm passionate about informatics, with a focus on web development and software applications. 
+                        Based in France, I'm currently training at the Ecole de Numérique platform in Marseille, 
+                        where I am honing my skills and expanding my expertise in the tech field. Driven by curiosity and a desire to innovate, 
+                        I aim to create impactful and efficient digital solutions.
+                    </p>
+                    <button class="button">
+                        <a href="fichiers/cv.pdf" target="_blank" download="Mon_CV.pdf" >Download CV</a>
+                        <span class="icon fa fa-arrow-right" ></span>
+                    </button>
+                </div>
+                <div class =navigation>
+                    <div class="nav">
+                        <a href="">
+                            <i class="fa fa-home active"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-cog"></i>
+                        </a>        
+                        <a href="">
+                            <i class="fa fa-comment"></i>
+                        </a>    
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- JAVASCRIPT FOR DARK AND LIGHT THEME -->
+    <script>
+        let  btn=document.querySelector(".toggle");
+        let icon=document.querySelector(".toggle i");
+        let body=document.querySelector(".hero-header");
+
+        btn.onclick=function(){
+            body.classList.toggle("light-theme");
+            if(body.classList.contains("light-theme"))
+            {
+                icon.classList.add("fa-moon");
+                icon.classList.remove("fa-sun");
+            }
+            else{
+                icon.classList.add("fa-sun");
+                icon.classList.remove("fa-moon");
+
+            }
+        }
+    </script>
+</body>
+</html>
