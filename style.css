@@ -255,15 +255,3 @@
 .back-button:hover {
     background-color: #ffb400;
     color: #111;
-
-}.contact-item-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 0.3s;
-  }
-  
-  .contact-item-link:hover {
-    transform: translateX(5px);
-  }
-  
