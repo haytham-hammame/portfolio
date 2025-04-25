@@ -256,3 +256,26 @@
     background-color: #ffb400;
     color: #111;
 }
+
+.nav-icons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+  
+  .nav-icons a {
+    color: white;
+    font-size: 1.6em;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+}
+  
+  .nav-icons a:hover {
+    transform: scale(1.2);
+    color: #0891b2;
+}
+  
