@@ -8,7 +8,7 @@
 </head>
 <body class="hero-header">
     <div class="container">
-        <div class="header-content">  
+        <div class="header-content contact-layout">  
             <div class="contact-page">
                 <h1>Contact Me</h1>
                 <div class="contact-section">
@@ -35,19 +35,54 @@
             </div>
             <div class="navigation">
                 <div class="nav">
-                    <a href="index.html">
-                        <i class="fa fa-home active"></i>
+                    <a href="index.html"><i class="fa fa-home active"></i>
                     </a>
-                    <a href="projects.html">
-                        <i class="fa fa-user"></i>
+                    <a href="projects.html"><i class="fa fa-user"></i>
                     </a>   
-                    <a href="contact.html">
-                        <i class="fa fa-comment"></i>
+                    <a href="contact.html"><i class="fa fa-comment"></i>
                     </a>
                 </div>
             </div>   
         </div> 
-    </div>  
+    </div>
+    <script>
+        // Récupérer tous les liens de navigation
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Fonction pour désactiver toutes les icônes actives
+        function removeActiveClass() {
+            navLinks.forEach(link => {
+                link.querySelector('i').classList.remove('active');
+            });
+        }
+    
+        // Parcours chaque lien pour lui ajouter ou enlever la classe 'active' au clic
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Supprimer la classe 'active' de tous les liens
+                removeActiveClass();
+    
+                // Ajouter la classe 'active' au lien cliqué
+                link.querySelector('i').classList.add('active');
+            });
+        });
+    
+        // Détecter la page actuelle et ajouter la classe active correspondante
+        const currentPage = window.location.pathname.split('/').pop();
+    
+        navLinks.forEach(link => {
+            const page = link.getAttribute('href').split('/').pop();
+            if (currentPage === page) {
+                // Supprimer la classe active de toutes les icônes d'abord
+                removeActiveClass();
+                
+                // Ajouter la classe active à l'icône correspondant à la page actuelle
+                link.querySelector('i').classList.add('active');
+            }
+        });
+    </script>
+    
+      
 
 </body>
 </html>

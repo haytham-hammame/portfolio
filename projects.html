@@ -9,92 +9,120 @@
 </head>
 <body class="hero-header">
   <div class="container">
-    <div class="contact-page">
-      <h1>Mes Projets</h1>
-      <div class="contact-section">
+    <div class="header-content contact-layout">
+      <div class="contact-page">
+        <h1>Mes Projets</h1>
+        <div class="contact-section">
 
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <strong>Horloge (Clock)</strong><br/>
-            <a href="https://github.com/haytham-hammame/clock" target="_blank">Voir sur GitHub</a>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>Horloge (Clock)</strong><br/>
+              <a href="https://github.com/haytham-hammame/clock" target="_blank">Voir sur GitHub</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <strong>Tic Tac Toe</strong><br/>
-            <a href="https://github.com/haytham-hammame/tic-tac-toe" target="_blank">Voir sur GitHub</a>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>Tic Tac Toe</strong><br/>
+              <a href="https://github.com/haytham-hammame/tic-tac-toe" target="_blank">Voir sur GitHub</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <strong>Calculatrice</strong><br/>
-            <a href="https://github.com/haytham-hammame/calculatrice" target="_blank">Voir sur GitHub</a>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>Calculatrice</strong><br/>
+              <a href="https://github.com/haytham-hammame/calculatrice" target="_blank">Voir sur GitHub</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <strong>Jeu du Pendu</strong><br/>
-            <a href="https://github.com/haytham-hammame/pendu" target="_blank">Voir sur GitHub</a>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>Jeu du Pendu</strong><br/>
+              <a href="https://github.com/haytham-hammame/pendu" target="_blank">Voir sur GitHub</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <strong>Fruit Ninja</strong><br/>
-            <a href="https://github.com/haytham-hammame/fruit-ninja" target="_blank">Voir sur GitHub</a>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>Fruit Ninja</strong><br/>
+              <a href="https://github.com/haytham-hammame/fruit-ninja" target="_blank">Voir sur GitHub</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <strong>Pokémon Mini-Jeu</strong><br/>
-            <a href="https://github.com/haytham-hammame/Pokemon" target="_blank">Voir sur GitHub</a>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>Pokémon Mini-Jeu</strong><br/>
+              <a href="https://github.com/haytham-hammame/Pokemon" target="_blank">Voir sur GitHub</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <i class="fa fa-globe"></i>
-          <div>
-            <strong>Portfolio Web</strong><br/>
-            <a href="https://haytham-hammame.github.io/portfolio/" target="_blank">Voir le site</a>
+          <div class="contact-item">
+            <i class="fa fa-globe"></i>
+            <div>
+              <strong>Portfolio Web</strong><br/>
+              <a href="https://haytham-hammame.github.io/portfolio/" target="_blank">Voir le site</a>
+            </div>
           </div>
-        </div>
 
-        <div class="contact-item">
-          <i class="fa fa-globe"></i>
-          <div>
-            <strong>Fansite HTML</strong><br/>
-            <a href="https://haytham-hammame.github.io/Fansite/" target="_blank">Voir le site</a>
+          <div class="contact-item">
+            <i class="fa fa-globe"></i>
+            <div>
+              <strong>Fansite HTML</strong><br/>
+              <a href="https://haytham-hammame.github.io/Fansite/" target="_blank">Voir le site</a>
+            </div>
           </div>
-        </div>
 
+        </div>
+        <a href="index.html"><button class="back-button">← Retour au Portfolio</button></a>
       </div>
-      <a href="index.html"><button class="back-button">← Retour au Portfolio</button></a>
-    </div>
 
-    <!-- Bloc de navigation (en dehors de la div .container) -->
-    <div class="navigation">
-      <div class="nav">
-        <a href="index.html">
-          <i class="fa fa-home active"></i>
-        </a>
-        <a href="projects.html">
-          <i class="fa fa-user"></i>
-        </a>   
-        <a href="contact.html">
-          <i class="fa fa-comment"></i>
-        </a>
+      <!-- Bloc de navigation (en dehors de la div .container) -->
+      <div class="navigation">
+        <div class="nav">
+          <a href="index.html">
+            <i class="fa fa-home"></i>
+          </a>
+          <a href="projects.html">
+            <i class="fa fa-user"></i>
+          </a>   
+          <a href="contact.html">
+            <i class="fa fa-comment"></i>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </div> 
+  <script>
+    // Récupérer toutes les icônes dans la navigation
+    const navLinks = document.querySelectorAll('.navigation .nav a');
+
+    // Ajouter un événement au clic pour chaque lien
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Enlever la classe "active" de toutes les icônes
+            navLinks.forEach(link => {
+                link.querySelector('i').classList.remove('active');
+            });
+
+            // Ajouter la classe "active" à l'icône du lien cliqué
+            this.querySelector('i').classList.add('active');
+        });
+    });
+
+    // Marquer l'icône correspondante à la page actuelle comme active
+    const currentPage = window.location.pathname.split('/').pop();
+    const activeLink = document.querySelector(`.navigation .nav a[href="${currentPage}"]`);
+    if (activeLink) {
+        activeLink.querySelector('i').classList.add('active');
+    }
+  </script>
+
+
 </body>
 </html>
