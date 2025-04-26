@@ -261,3 +261,14 @@
     align-items: center;
     justify-content: center;
 }
+.hero-header {
+    position: relative;
+}
+
+.navigation {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
