@@ -12,9 +12,10 @@
     <div class="header-content contact-layout">
       <div class="contact-page">
         <h1>Mes Projets</h1>
-        <div class="contact-section">
 
-          <div class="contact-item">
+        <div class="projects-grid">
+
+          <div class="project-card">
             <i class="fab fa-github"></i>
             <div>
               <strong>Horloge (Clock)</strong><br/>
@@ -22,7 +23,7 @@
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="project-card">
             <i class="fab fa-github"></i>
             <div>
               <strong>Tic Tac Toe</strong><br/>
@@ -30,7 +31,7 @@
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="project-card">
             <i class="fab fa-github"></i>
             <div>
               <strong>Calculatrice</strong><br/>
@@ -38,7 +39,7 @@
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="project-card">
             <i class="fab fa-github"></i>
             <div>
               <strong>Jeu du Pendu</strong><br/>
@@ -46,7 +47,7 @@
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="project-card">
             <i class="fab fa-github"></i>
             <div>
               <strong>Fruit Ninja</strong><br/>
@@ -54,7 +55,7 @@
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="project-card">
             <i class="fab fa-github"></i>
             <div>
               <strong>Pokémon Mini-Jeu</strong><br/>
@@ -62,7 +63,7 @@
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="project-card">
             <i class="fa fa-globe"></i>
             <div>
               <strong>Portfolio Web</strong><br/>
@@ -70,7 +71,7 @@
             </div>
           </div>
 
-          <div class="contact-item">
+          <div class="project-card">
             <i class="fa fa-globe"></i>
             <div>
               <strong>Fansite HTML</strong><br/>
@@ -79,10 +80,11 @@
           </div>
 
         </div>
+
         <a href="index.html"><button class="back-button">← Retour au Portfolio</button></a>
       </div>
 
-      <!-- Bloc de navigation (en dehors de la div .container) -->
+      <!-- Navigation -->
       <div class="navigation">
         <div class="nav">
           <a href="index.html">
@@ -96,33 +98,27 @@
           </a>
         </div>
       </div>
+
     </div>
   </div> 
-  <script>
-    // Récupérer toutes les icônes dans la navigation
-    const navLinks = document.querySelectorAll('.navigation .nav a');
 
-    // Ajouter un événement au clic pour chaque lien
+  <script>
+    const navLinks = document.querySelectorAll('.navigation .nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            // Enlever la classe "active" de toutes les icônes
             navLinks.forEach(link => {
                 link.querySelector('i').classList.remove('active');
             });
-
-            // Ajouter la classe "active" à l'icône du lien cliqué
             this.querySelector('i').classList.add('active');
         });
     });
 
-    // Marquer l'icône correspondante à la page actuelle comme active
     const currentPage = window.location.pathname.split('/').pop();
     const activeLink = document.querySelector(`.navigation .nav a[href="${currentPage}"]`);
     if (activeLink) {
         activeLink.querySelector('i').classList.add('active');
     }
   </script>
-
 
 </body>
 </html>

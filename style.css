@@ -272,3 +272,56 @@
     transform: translateY(-50%);
 }
 
+/*project deux par ligne */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #2b2a2a;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: 0.3s;
+}
+
+.project-card i {
+    background-color: #fff;
+    color: #2b2a2a;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.project-card:hover {
+    background-color: #ffb400;
+    color: #111;
+    transform: translateY(-5px);
+}
+
+.project-card:hover i {
+    background-color: #111;
+    color: #ffb400;
+}
+
+.project-card a {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+@media(max-width:768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
